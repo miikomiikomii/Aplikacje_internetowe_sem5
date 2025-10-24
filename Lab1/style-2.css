@@ -1,0 +1,41 @@
+
+:root {
+    --pirate: url("https://i.pinimg.com/originals/bd/64/52/bd64524d365b1cb58dcbed64e3a4e455.gif");
+    --p-ship: url("https://png.pngtree.com/png-vector/20240804/ourmid/pngtree-pirate-ship-with-a-skull-and-crossbones-on-the-front-generative-png-image_13375975.png");
+    --water: url("https://media.istockphoto.com/id/943874232/vector/abstract-ocean-wave-seamless-pattern-wavy-line-stripe-background.jpg?s=612x612&w=0&k=20&c=ORw7ln4cWua9DH98bqLALhSvg4hrgiLhrJAKuikh224=");
+    --beach: url("https://pngimg.com/d/beach_PNG19.png");
+}
+
+/*background: content-box radial-gradient(crimson, skyblue);*/
+
+body                            {background-image: var(--water); background-repeat: repeat;}
+h1                              {text-align: center;}
+h1, h2, h3                      {font-family: "Pirata One"; color: black; text-shadow: pink 2px 5px; }
+p, ul                           {font-family: "Georgia", Times, serif; color: black; text-shadow: 3px 3px 5px pink, 0 0 1em white, 0 0 0.2em pink;}
+footer                          {color: pink; text-shadow: black 1px 1px;}
+ul                              {list-style-type: "★ "; }
+
+.h-one-image                    {background-image: var(--pirate); background-size: 100%; border-radius: 10px; background-position: center;
+                                    background-repeat: no-repeat; aspect-ratio: 1/1;
+                                    /* ramka */
+                                    border: 8px solid #8b5a2b; border-radius: 12px;
+                                    box-shadow: 0 0 10px rgba(0,0,0,0.6), inset 0 0 10px rgba(255, 215, 0, 0.2), inset 0 0 30px rgba(0,0,0,0.3);
+                                    background-color: rgba(255, 235, 205, 0.2); padding: 10px;}
+.h-three-image                  {background-image: var(--p-ship); background-size: 100%; border-radius: 10px; background-position: center;
+                                    background-repeat: no-repeat; aspect-ratio: 1/1;margin-left: 20%; margin-right: 20%;}
+
+
+
+/* =========================== flexbox =================================== */
+body                            {display: flex; flex-direction: column;}
+.one, .two, .three, .four       {flex: 1; border-radius: 20px; padding: 20px;}
+
+
+@media (min-width: 800px) {
+    .flex-container-zero        {flex-direction: row; align-items: stretch;}
+    body                        {flex-direction: row; align-items: stretch; }
+    .one, .two                  {flex: 1; border-radius: 20px;padding-left: 15px; margin: 0 15px;}
+    .h-three-image              {flex: 1; border-radius: 10px;padding: 10px;}
+    .three                      {flex: 1; border-radius: 20px;padding-left: 15px; margin: 0 5px;}
+    .four                       {flex: 1; border-radius: 20px;padding-left: 15px; margin: 0 75px;}
+}

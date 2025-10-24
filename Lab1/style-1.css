@@ -1,0 +1,49 @@
+:root {
+    --hacker-two: url("https://hypertecsp.com/wp-content/uploads/piracy-2.jpg");
+    --hacker: url("https://www.freeiconspng.com/uploads/robber-hacker-png-4.png");
+}
+
+h2.h_one::before            {content: ' \22F0'}
+h2.h_two::before            {content: ' \22EF'}
+h2.h_three::before          {content: ' \22F1'}
+footer::before              {content: ' \261E'}
+footer::after               {content: ' \261C'}
+
+
+body                        {background: radial-gradient(circle at center, rgba(0,0,50,1), rgba(0,0,0,1)); color: white;}
+h1                          {font-family: Rockwell Extra Bold,monospace;text-align: center; padding-top: 2%;
+                                text-shadow: 3px 3px 5px red, 0 0 1em green, 0 0 0.2em green;}
+h2                          {font-family: Rockwell Extra Bold,Rockwell Bold,monospace; text-align: start; margin-left: 6%; margin-right: 6%;
+                                text-shadow: 3px 3px 5px blue, 0 0 1em red, 0 0 0.2em red;}
+h3                          {font-family: Rockwell Extra Bold,Rockwell Bold,monospace; text-align: start; margin-left: 4%; margin-right: 4%;}
+p                           {font-family: Consolas,monaco,monospace; text-align: justify; margin-left: 2%; margin-right: 2%;}
+ul                          {font-family: Consolas,monaco,monospace; list-style-type: decimal-leading-zero;}
+footer                      {font-family: Consolas,monaco,monospace; font-size: 80%; text-align: LEFT;}
+
+.h-one-image                {background-image: var(--hacker); background-size: cover; background-position: bottom; padding-top: 20%;}
+.h-four-image               {background-image: var(--hacker-two); background-size: 100%; border-radius: 10px; background-position: center;
+                                background-repeat: no-repeat; aspect-ratio: 16 / 3;margin-left: 2%; margin-right: 2%;}
+
+
+h2 {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 2%;
+    background-color: rgba(255,0,0,0.05); /* lekki kontrast */
+}
+
+/* =========================== flexbox =================================== */
+/*two top*/
+.flex-container-one         {display: flex; flex-direction: column; gap: 1px; margin: 10px;}
+.one, .two                  {flex: 1; background-color: rgba(255, 255, 255, 0.05);border-radius: 10px;padding: 10px;}
+/*two bottom*/
+.flex-container-two         {display: flex; flex-direction: column; gap: 1px; margin: 10px;}
+.three, .four               {flex: 1;background-color: rgba(255, 255, 255, 0.05);border-radius: 10px;padding: 10px;}
+
+/*dostosowanie do szerokosci ekranu*/
+@media (min-width: 900px) {
+    .flex-container-one, .flex-container-two    {flex-direction: row; align-items: stretch;}
+    .one, .two, .three, .four                   {flex: 1; margin: 0 5px;}
+}
+
