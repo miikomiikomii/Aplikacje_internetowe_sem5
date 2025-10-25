@@ -15,7 +15,7 @@ p, ul                           {font-family: "Georgia", Times, serif; color: bl
 footer                          {color: pink; text-shadow: black 1px 1px;}
 ul                              {list-style-type: "★ "; }
 
-.h-one-image                    {background-image: var(--pirate); background-size: 100%; border-radius: 10px; background-position: center;
+.h-one-image                    {background-image: var(--pirate); background-size: 100%; background-position: center;
                                     background-repeat: no-repeat; aspect-ratio: 1/1;
                                     /* ramka */
                                     border: 8px solid #8b5a2b; border-radius: 12px;
