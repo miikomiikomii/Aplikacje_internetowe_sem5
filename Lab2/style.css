@@ -1,0 +1,205 @@
+:root {
+    --bg: #0f0f0f;
+    --panel: #1b1b1b;
+    --panel-2: #121212;
+    --fg: #f5f5f5;
+    --acc: #00ffcc;
+    --acc-2: #00e6b8;
+    --muted: #9aa0a6;
+}
+
+/* Reset i podstawy */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+    display: grid;
+    place-items: start center;
+}
+
+.container {
+    width: min(680px, 92vw);
+    margin-top: 40px;
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 18px #00ffcc22;
+}
+
+h1 {
+    margin: 0 0 14px;
+    color: var(--acc);
+    text-align: center;
+}
+
+/* ============================= */
+/* Wyszukiwarka (górne pole) */
+.top-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 14px;
+    outline: none;
+    background: var(--panel-2);
+    color: var(--fg);
+}
+.top-input::placeholder { color: var(--muted); }
+
+/* ============================= */
+/* Lista zadań */
+.scroll-list {
+    max-height: 320px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background: var(--panel-2);
+    padding: 4px;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* pojedyncze zadanie */
+.element_todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 6px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.todo_main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    flex: 1;
+}
+
+.element_text {
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.element_data {
+    color: var(--muted);
+    font-size: 0.9em;
+}
+
+/* sekcja przycisku usuń */
+.controls {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+/* ============================= */
+/* Przycisk */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--acc);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover { background: var(--acc-2); }
+
+.btn-small {
+    padding: 6px 10px;
+    font-size: 0.9em;
+}
+.btn-danger {
+    background: #ff5c5c;
+    color: #000;
+}
+.btn-danger:hover {
+    background: #ff7878;
+}
+
+/* ============================= */
+/* Dolne pola dodawania */
+.bottom-inputs {
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.bottom-inputs input[type="text"],
+.bottom-inputs input[type="date"] {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: var(--panel-2);
+    color: var(--fg);
+}
+.bottom-inputs input::placeholder { color: var(--muted); }
+
+/* ============================= */
+/* Dodatkowe elementy meta */
+.meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* ============================= */
+/* Podświetlenie wyszukiwanej frazy */
+.highlight {
+    background: yellow;
+    color: #000;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+/* ============================= */
+/* Tryb edycji inline */
+.element_todo.editing {
+    background: #1f1f1f;
+    border-radius: 8px;
+}
+
+.inline-editor {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.inline-editor .edit-text,
+.inline-editor .edit-date {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: var(--panel-2);
+    color: var(--fg);
+    flex: 1;
+}
+
+/* ============================= */
+/* Scrollbar dla listy */
+.scroll-list::-webkit-scrollbar {
+    width: 8px;
+}
+.scroll-list::-webkit-scrollbar-thumb {
+    background: var(--acc);
+    border-radius: 4px;
+}
+.scroll-list::-webkit-scrollbar-thumb:hover {
+    background: var(--acc-2);
+}

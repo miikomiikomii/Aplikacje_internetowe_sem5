@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lista zadań</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Lista zadań</h1>
+
+            <!-- Wyszukiwarka -->
+            <input type="text" id="searchInput" class="top-input" placeholder="Szukaj...">
+
+            <!-- Lista zadań -->
+            <div class="scroll-list" style="max-height:320px; overflow-y:auto;">
+                <li id="itemList"></li>
+            </div>
+
+            <!-- Dodawanie nowego zadania -->
+            <form id="addForm" class="bottom-inputs">
+                <input type="text" id="itemText" placeholder="Nowe zadanie..." required>
+                <input type="date" id="itemDate">
+                <button type="submit" id="addBtn">Dodaj</button>
+            </form>
+        </div>
+
+
+    <script src="script2.js"></script>
+    </body>
+</html>
