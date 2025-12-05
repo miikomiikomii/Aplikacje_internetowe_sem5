@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather station</title>
+    <!-- WAŻNE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <div id="top-panel">
+        <div id="weather-search-params">
+            <h1>Rest Weather</h1>
+            <input type="text" value="Szczecin, Poland" id="locationInput">
+            <button id="checkButton">Check!</button>
+        </div>
+
+        <div id="current-weather"></div>
+    </div>
+
+    <div id="forecast-section">
+        <h2>Prognoza 5-dniowa</h2>
+        <div id="weather-results-container"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
