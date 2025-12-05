@@ -153,7 +153,7 @@ const WeatherApp = class {
 
 }
 
-document.weatherApp = new WeatherApp("be1fb0ab6561e9c87abcdc736c857aee", "#weather-results-container");
+document.weatherApp = new WeatherApp("klucz api idzie tutaj", "#weather-results-container");
 
 document.querySelector("#checkButton").addEventListener("click", function(){
     const query = document.querySelector("#locationInput").value;
@@ -167,4 +167,5 @@ const forecastScroller = document.querySelector("#weather-results-container");
 forecastScroller.addEventListener("wheel", (evt) => {
     evt.preventDefault();
     forecastScroller.scrollLeft += evt.deltaY;
+
 });
